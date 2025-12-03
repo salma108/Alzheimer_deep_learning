@@ -77,7 +77,7 @@ docker compose up --build
 
 ---
 
-## 🔍 Visualisations automatiques
+##  Visualisations automatiques
 
 Pour générer toutes les visualisations (échantillons, distribution de classes, augmentations, MixUp/CutMix, PCA, t-SNE) :
 
@@ -87,7 +87,7 @@ python -m src.models.visualizations
 
 Les images seront enregistrées dans le dossier `metrics/`.
 
-## 📊 Rapport d'évaluation
+##  Rapport d'évaluation
 
 Après l'entraînement, génère un rapport global (JSON + HTML) :
 
@@ -98,7 +98,7 @@ python -m src.models.evaluation
 - Résumé : `metrics/final_summary.json`
 - Rapport HTML : `metrics/report.html` (exportable en PDF depuis le navigateur)
 
-## 📈 Dashboard Streamlit
+## Dashboard Streamlit
 
 Pour un tableau de bord interactif (résultats + visualisations + XAI) :
 
