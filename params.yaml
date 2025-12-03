@@ -1,0 +1,25 @@
+dataset:
+  raw_dir: data/raw/Alzheimer_MRI_4_classes_dataset
+  split_dir: data/processed/alzheimer_split
+  img_size: 224
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+
+training:
+  batch_size: 4
+  num_workers: 0
+  epochs_resnet: 5
+  epochs_densenet: 5
+  epochs_vit: 5
+  lr_resnet: 1e-4
+  lr_densenet: 1e-4
+  lr_vit: 2e-5
+  patience: 3
+  seed: 42
+  mixup_alpha: 0.2
+  cutmix_alpha: 1.0
+  mix_prob: 0.5
+
+models:
+  num_labels: 4
