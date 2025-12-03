@@ -477,3 +477,19 @@ textarea:focus {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+/* XAI VIEWER FIX */
+.xai-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.xai-image {
+  max-width: 550px;          /* 👉 Taille limite */
+  width: 100%;               /* s’adapte au container */
+  height: auto;              /* ratio respecté */
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  object-fit: contain;       /* évite les déformations */
+}
