@@ -56,7 +56,6 @@ function NewAnalysisPage() {
                   type="text"
                   value={patientName}
                   onChange={(e) => setPatientName(e.target.value)}
-                  placeholder="Ex : Mme Dupont"
                 />
               </label>
               <label>
