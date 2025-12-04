@@ -1,8 +1,0 @@
-[core]
-    remote = s3remote
-
-['remote "s3remote"']
-    url = s3://VOTRE_BUCKET_S3/alzheimer_project
-    endpointurl = https://s3.YOUR-REGION.amazonaws.com
-    access_key_id = VOTRE_ACCESS_KEY
-    secret_access_key = VOTRE_SECRET_KEY
