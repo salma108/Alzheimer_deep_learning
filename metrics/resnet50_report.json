@@ -1,0 +1,39 @@
+{
+  "MildDemented": {
+    "precision": 0.6507936507936508,
+    "recall": 0.45054945054945056,
+    "f1-score": 0.5324675324675324,
+    "support": 91.0
+  },
+  "ModerateDemented": {
+    "precision": 1.0,
+    "recall": 0.2857142857142857,
+    "f1-score": 0.4444444444444444,
+    "support": 7.0
+  },
+  "NonDemented": {
+    "precision": 0.8713235294117647,
+    "recall": 0.740625,
+    "f1-score": 0.8006756756756757,
+    "support": 320.0
+  },
+  "VeryMildDemented": {
+    "precision": 0.6032786885245902,
+    "recall": 0.8214285714285714,
+    "f1-score": 0.6956521739130435,
+    "support": 224.0
+  },
+  "accuracy": 0.7227414330218068,
+  "macro avg": {
+    "precision": 0.7813489671825015,
+    "recall": 0.574579326923077,
+    "f1-score": 0.618309956625174,
+    "support": 642.0
+  },
+  "weighted avg": {
+    "precision": 0.7479442022795875,
+    "recall": 0.7227414330218068,
+    "f1-score": 0.7221307784087142,
+    "support": 642.0
+  }
+}

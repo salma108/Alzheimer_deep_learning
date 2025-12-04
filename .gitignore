@@ -1,0 +1,8 @@
+mlruns/
+models/
+*.pth
+*.pt
+*.h5
+*.ckpt
+*.onnx
+__pycache__/

@@ -1,0 +1,6 @@
+FROM node:20-alpine
+WORKDIR /app
+COPY frontend/package.json frontend/vite.config.mts frontend/index.html ./
+COPY frontend/src ./src
+RUN npm install
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "3000"]
