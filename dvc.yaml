@@ -2,32 +2,30 @@ stages:
   prepare_data:
     cmd: python -m src.data.prepare_data
     deps:
-      - src/data/prepare_data.py
-      - src/utils/config.py
-      - params.yaml
-      - data/raw
+    - data/raw
+    - params.yaml
+    - src/data/prepare_data.py
+    - src/utils/config.py
     outs:
-      - data/processed
-
+    - data/processed
   train_models:
     cmd: python -m src.models.train_all
     deps:
-      - src/models/train_all.py
-      - src/models/architectures.py
-      - src/data/dataloaders.py
-      - src/data/preprocessing.py
-      - src/utils/config.py
-      - data/processed
-      - params.yaml
+    - data/processed
+    - params.yaml
+    - src/data/dataloaders.py
+    - src/data/preprocessing.py
+    - src/models/architectures.py
+    - src/models/train_all.py
+    - src/utils/config.py
     outs:
-      - models
-      - metrics
-
+    - metrics
+    - models
   evaluate:
     cmd: python -m src.models.evaluation
     deps:
-      - src/models/evaluation.py
-      - models
-      - metrics
+    - metrics
+    - models
+    - src/models/evaluation.py
     outs:
-      - results
+    - results
