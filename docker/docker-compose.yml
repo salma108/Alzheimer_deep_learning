@@ -1,11 +1,43 @@
 version: "3.9"
+
 services:
+  db:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: salma
+      POSTGRES_DB: alzheimer_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  webdav:
+    image: bytemark/webdav
+    restart: always
+    environment:
+      AUTH_TYPE: Basic
+      USERNAME: user
+      PASSWORD: pass
+    ports:
+      - "8765:80"
+    volumes:
+      - ./dvc_storage:/var/lib/dav
+
   api:
     build:
       context: ..
       dockerfile: docker/Dockerfile.api
     ports:
       - "8000:8000"
+    depends_on:
+      - db
+      - webdav
+    environment:
+      DVC_REMOTE_URL: "webdav://webdav:80/dvc_storage"
+      DATABASE_URL: "postgresql+psycopg://postgres:salma@db:5432/alzheimer_db"
+
   frontend:
     build:
       context: ..
@@ -14,3 +46,6 @@ services:
       - "3000:3000"
     depends_on:
       - api
+
+volumes:
+  postgres_data:

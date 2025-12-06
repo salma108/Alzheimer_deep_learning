@@ -1,4 +1,4 @@
-# Alzheimer Project – Classification IRM (Deep Learning + MLOps + React)
+# Alzheimer Project – Classification IRM 
 
 Ce projet implémente une pipeline complète pour la classification d'IRM cérébrales
 (4 classes Alzheimer) avec :
@@ -19,7 +19,7 @@ Ce projet implémente une pipeline complète pour la classification d'IRM céré
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate    # Windows: .venv\Scripts\activate
+source .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 

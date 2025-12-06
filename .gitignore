@@ -1,8 +1,107 @@
-mlruns/
-models/
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# -----------------------------
+# Virtual environment
+# -----------------------------
+venv/
+env/
+.venv/
+
+# -----------------------------
+# Jupyter / IPython
+# -----------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.ipynb
+
+# -----------------------------
+# FastAPI / Uvicorn
+# -----------------------------
+*.log
+
+# -----------------------------
+# Machine Learning Models
+# -----------------------------
 *.pth
 *.pt
 *.h5
 *.ckpt
 *.onnx
-__pycache__/
+*.joblib
+*.pkl
+
+# MLFlow directories
+mlruns/
+models/
+results/
+metrics/
+
+# Torch saves
+*.tar
+
+# -----------------------------
+# Cache / Temp
+# -----------------------------
+*.cache/
+.cache/
+*.tmp
+*.temp
+tmp/
+temp/
+
+# -----------------------------
+# Data (ne jamais mettre vos dataset dans git)
+# -----------------------------
+data/
+datasets/
+*.csv
+*.npy
+*.npz
+*.xlsx
+*.zip
+
+# -----------------------------
+# Build / Packaging
+# -----------------------------
+build/
+dist/
+*.egg-info/
+*.egg
+
+# -----------------------------
+# Environment files
+# -----------------------------
+.env
+.env.*
+*.env
+
+# -----------------------------
+# IDE / Editor
+# -----------------------------
+.vscode/
+.vscode/*
+.idea/
+*.swp
+
+# -----------------------------
+# Docker
+# -----------------------------
+/docker-data/
+/docker-compose.override.yml
+**/docker/logs/
+
+# -----------------------------
+# Node / Front-end
+# -----------------------------
+node_modules/
+dist/
+*.map
+
+wheels/
+wheels_linux/
