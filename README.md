@@ -8,7 +8,7 @@ Ce projet implémente une pipeline complète pour la classification d'IRM céré
 - **Early stopping** pour tous les modèles
 - Comparaison équitable (mêmes données, mêmes hyperparamètres)
 - **XAI** : Grad-CAM (CNN) et attention rollout (ViT)
-- MLOps : **DVC** (+ remote S3 à configurer), logs basiques
+- MLOps : **DVC**  
 - API **FastAPI**
 - Frontend **React (Vite)** pour l'application médecin
 - Dockerisation (backend + frontend)
